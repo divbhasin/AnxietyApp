@@ -13,6 +13,8 @@
 		6F7AB405209DE8A20065D0D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB404209DE8A20065D0D4 /* Assets.xcassets */; };
 		6F7AB408209DE8A20065D0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB406209DE8A20065D0D4 /* LaunchScreen.storyboard */; };
 		6F7AB40B209DE8A20065D0D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AB40A209DE8A20065D0D4 /* main.m */; };
+		6F7AB412209DF9F90065D0D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */; };
+		991EF994A05C3641C322EACB /* libPods-AnxietyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43EBF3A904CFD4B00378531 /* libPods-AnxietyApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		6F7AB407209DE8A20065D0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F7AB409209DE8A20065D0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F7AB40A209DE8A20065D0D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98EA9B2771FFF0172E7210AC /* Pods-AnxietyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnxietyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D43EBF3A904CFD4B00378531 /* libPods-AnxietyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnxietyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9151A0F972DBFD42286E01 /* Pods-AnxietyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnxietyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991EF994A05C3641C322EACB /* libPods-AnxietyApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B751843830F252A020F88F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98EA9B2771FFF0172E7210AC /* Pods-AnxietyApp.debug.xcconfig */,
+				DA9151A0F972DBFD42286E01 /* Pods-AnxietyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F7AB3EF209DE8A20065D0D4 = {
 			isa = PBXGroup;
 			children = (
 				6F7AB3FA209DE8A20065D0D4 /* AnxietyApp */,
 				6F7AB3F9209DE8A20065D0D4 /* Products */,
+				4B751843830F252A020F88F9 /* Pods */,
+				AA76421B53D49B6F6DC874F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,9 +84,18 @@
 				6F7AB404209DE8A20065D0D4 /* Assets.xcassets */,
 				6F7AB406209DE8A20065D0D4 /* LaunchScreen.storyboard */,
 				6F7AB409209DE8A20065D0D4 /* Info.plist */,
+				6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */,
 				6F7AB40A209DE8A20065D0D4 /* main.m */,
 			);
 			path = AnxietyApp;
+			sourceTree = "<group>";
+		};
+		AA76421B53D49B6F6DC874F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D43EBF3A904CFD4B00378531 /* libPods-AnxietyApp.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F7AB40E209DE8A20065D0D4 /* Build configuration list for PBXNativeTarget "AnxietyApp" */;
 			buildPhases = (
+				AFEEDF860F0CF7560E977879 /* [CP] Check Pods Manifest.lock */,
 				6F7AB3F4209DE8A20065D0D4 /* Sources */,
 				6F7AB3F5209DE8A20065D0D4 /* Frameworks */,
 				6F7AB3F6209DE8A20065D0D4 /* Resources */,
+				923183C1D4A0352D85427E15 /* [CP] Embed Pods Frameworks */,
+				526B77AB7D3A4F2B3306E17E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +160,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F7AB408209DE8A20065D0D4 /* LaunchScreen.storyboard in Resources */,
+				6F7AB412209DF9F90065D0D4 /* GoogleService-Info.plist in Resources */,
 				6F7AB405209DE8A20065D0D4 /* Assets.xcassets in Resources */,
 				6F7AB403209DE8A20065D0D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		526B77AB7D3A4F2B3306E17E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923183C1D4A0352D85427E15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFEEDF860F0CF7560E977879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnxietyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F7AB3F4209DE8A20065D0D4 /* Sources */ = {
@@ -276,6 +358,7 @@
 		};
 		6F7AB40F209DE8A20065D0D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98EA9B2771FFF0172E7210AC /* Pods-AnxietyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +372,7 @@
 		};
 		6F7AB410209DE8A20065D0D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA9151A0F972DBFD42286E01 /* Pods-AnxietyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
