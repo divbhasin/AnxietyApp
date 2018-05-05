@@ -32,15 +32,7 @@
                             <outlet property="delegate" destination="Al2-ho-WkE" id="CA3-Fe-efA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FreeToTalk" id="VaJ-bH-3uH">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="iBF-kN-eFs">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="epn-SB-t2P">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="FreeToTalk" id="VaJ-bH-3uH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qx1-yc-WXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
