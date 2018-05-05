@@ -13,6 +13,7 @@
 @end
 
 @import Firebase;
+@import FirebaseAuth;
 
 @implementation AppDelegate
 
@@ -20,6 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [FIRApp configure];
+    [[FIRAuth auth] signInWithEmail:@"divtest@email.com" password:@"123456" completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if (error == nil) {
+            printf("%s", [user.email UTF8String]);
+        } else {
+            printf("%s", [error.description UTF8String]);
+        }
+    }];
     return YES;
 }
 

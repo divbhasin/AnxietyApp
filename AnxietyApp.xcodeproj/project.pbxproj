@@ -7,28 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F356F21209E0AEB00998B82 /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F356F20209E0AEB00998B82 /* LoginTableViewController.m */; };
 		6F7AB3FD209DE8A20065D0D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AB3FC209DE8A20065D0D4 /* AppDelegate.m */; };
-		6F7AB400209DE8A20065D0D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AB3FF209DE8A20065D0D4 /* ViewController.m */; };
 		6F7AB403209DE8A20065D0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB401209DE8A20065D0D4 /* Main.storyboard */; };
 		6F7AB405209DE8A20065D0D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB404209DE8A20065D0D4 /* Assets.xcassets */; };
 		6F7AB408209DE8A20065D0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB406209DE8A20065D0D4 /* LaunchScreen.storyboard */; };
 		6F7AB40B209DE8A20065D0D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7AB40A209DE8A20065D0D4 /* main.m */; };
 		6F7AB412209DF9F90065D0D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */; };
+		6FF749B8209E1018001DC0C5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF749B7209E1018001DC0C5 /* User.m */; };
 		991EF994A05C3641C322EACB /* libPods-AnxietyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43EBF3A904CFD4B00378531 /* libPods-AnxietyApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F356F1F209E0AEB00998B82 /* LoginTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		6F356F20209E0AEB00998B82 /* LoginTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		6F7AB3F8209DE8A20065D0D4 /* AnxietyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnxietyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7AB3FB209DE8A20065D0D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F7AB3FC209DE8A20065D0D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6F7AB3FE209DE8A20065D0D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6F7AB3FF209DE8A20065D0D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6F7AB402209DE8A20065D0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F7AB404209DE8A20065D0D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F7AB407209DE8A20065D0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F7AB409209DE8A20065D0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F7AB40A209DE8A20065D0D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FF749B7209E1018001DC0C5 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6FF749B9209E13AB001DC0C5 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		98EA9B2771FFF0172E7210AC /* Pods-AnxietyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnxietyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D43EBF3A904CFD4B00378531 /* libPods-AnxietyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnxietyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9151A0F972DBFD42286E01 /* Pods-AnxietyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnxietyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnxietyApp/Pods-AnxietyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,14 +81,16 @@
 			children = (
 				6F7AB3FB209DE8A20065D0D4 /* AppDelegate.h */,
 				6F7AB3FC209DE8A20065D0D4 /* AppDelegate.m */,
-				6F7AB3FE209DE8A20065D0D4 /* ViewController.h */,
-				6F7AB3FF209DE8A20065D0D4 /* ViewController.m */,
+				6F356F1F209E0AEB00998B82 /* LoginTableViewController.h */,
+				6F356F20209E0AEB00998B82 /* LoginTableViewController.m */,
 				6F7AB401209DE8A20065D0D4 /* Main.storyboard */,
 				6F7AB404209DE8A20065D0D4 /* Assets.xcassets */,
 				6F7AB406209DE8A20065D0D4 /* LaunchScreen.storyboard */,
 				6F7AB409209DE8A20065D0D4 /* Info.plist */,
 				6F7AB411209DF9F90065D0D4 /* GoogleService-Info.plist */,
 				6F7AB40A209DE8A20065D0D4 /* main.m */,
+				6FF749B7209E1018001DC0C5 /* User.m */,
+				6FF749B9209E13AB001DC0C5 /* User.h */,
 			);
 			path = AnxietyApp;
 			sourceTree = "<group>";
@@ -224,8 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F7AB400209DE8A20065D0D4 /* ViewController.m in Sources */,
+				6FF749B8209E1018001DC0C5 /* User.m in Sources */,
 				6F7AB40B209DE8A20065D0D4 /* main.m in Sources */,
+				6F356F21209E0AEB00998B82 /* LoginTableViewController.m in Sources */,
 				6F7AB3FD209DE8A20065D0D4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

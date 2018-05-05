@@ -7,4 +7,5 @@ target 'AnxietyApp' do
 
   # Pods for AnxietyApp
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
 end
