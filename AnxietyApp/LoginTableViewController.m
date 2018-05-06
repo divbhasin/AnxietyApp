@@ -7,7 +7,6 @@
 //
 
 #import "LoginTableViewController.h"
-#import "User.h"
 
 @interface LoginTableViewController ()
 
@@ -16,39 +15,13 @@
 @implementation LoginTableViewController
 
 - (void)viewDidLoad {
-    
+    [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    UIButton *button = [[UIButton alloc] init];
-    [button addTarget:self action:@selector(Login_Action:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *login = [[UIBarButtonItem alloc] initWithCustomView:button];
-    login.tintColor = [UIColor colorWithRed:0 green:0 blue:120 alpha:1];
-    super.navigationItem.leftBarButtonItem = login;
-}
-
-- (void)setTitleDisplay:(FIRUser *)user {
-    if (user.displayName) {
-        self.navigationItem.title = [NSString stringWithFormat:@"Welcome %@", user.displayName];
-    } else {
-        self.navigationItem.title = @"Authentication failed";
-    }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.handle = [[FIRAuth auth]
-                   addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
-                       [self setTitleDisplay:user];
-                       [self.tableView reloadData];
-                   }];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [[FIRAuth auth] removeAuthStateDidChangeListener:_handle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,10 +32,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
@@ -120,6 +95,7 @@
 }
 */
 
+<<<<<<< HEAD
 - (IBAction)Login_Action:(UIBarButtonItem *)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Login" message: @"Please login" preferredStyle: UIAlertControllerStyleAlert];
 
@@ -148,4 +124,6 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+=======
+>>>>>>> parent of 296610f... Can create users
 @end

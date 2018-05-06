@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import FirebaseAuth;
 
 @interface LoginTableViewController : UITableViewController
-
-@property (strong, nonatomic) FIRAuthStateDidChangeListenerHandle handle;
-@property (strong, nonatomic) UIBarButtonItem *login;
-- (IBAction)Login_Action:(UIBarButtonItem *)sender;
 
 @end
