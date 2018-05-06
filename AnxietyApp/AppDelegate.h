@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @import FirebaseAuth;
+@import FirebaseDatabase;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 
 @end
 

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-<<<<<<< HEAD
 @import FirebaseAuth;
 @import FirebaseDatabase;
 
@@ -18,9 +17,4 @@
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 - (IBAction)Login_Action:(UIBarButtonItem *)sender;
 
-=======
-
-@interface LoginTableViewController : UITableViewController
-
->>>>>>> 38e254cbe7517eba4bb751f46463c84fade0e0a3
 @end

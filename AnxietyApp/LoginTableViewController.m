@@ -9,6 +9,9 @@
 #import "LoginTableViewController.h"
 #import "User.h"
 @import FirebaseAuth;
+@import FirebaseDatabase;
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginTableViewController ()
 
@@ -31,7 +34,35 @@
     
     UIBarButtonItem *login = [[UIBarButtonItem alloc] initWithCustomView:button];
     login.tintColor = [UIColor colorWithRed:0 green:0 blue:120 alpha:1];
+    
+    FBSDKLoginButton *fb_login = [[FBSDKLoginButton alloc] init];
     super.navigationItem.leftBarButtonItem = login;
+    fb_login.center = self.view.center;
+    fb_login.delegate = self;
+    
+    [self.view addSubview:fb_login];
+}
+
+- (void) loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    
+}
+
+- (IBAction)loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+              error:(NSError *)error {
+    if (error == nil) {
+        FIRAuthCredential *credential = [FIRFacebookAuthProvider
+                                         credentialWithAccessToken:[FBSDKAccessToken currentAccessToken].tokenString];
+        [[FIRAuth auth] signInWithCredential:credential completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error occured.");
+            }
+            // User successfully signed in. Get user data from the FIRUser object
+            // ...
+        }];
+    } else {
+        NSLog(@"%@", error.localizedDescription);
+    }
 }
 
 - (void)setTitleDisplay:(FIRUser *)user {

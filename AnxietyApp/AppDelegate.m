@@ -14,6 +14,8 @@
 
 @import Firebase;
 @import FirebaseAuth;
+@import FirebaseDatabase;
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @implementation AppDelegate
 
@@ -21,16 +23,39 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [FIRApp configure];
-    [[FIRAuth auth] signInWithEmail:@"divtest@email.com" password:@"123456" completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+    self.ref = [[FIRDatabase database] reference];
+    
+    NSString *userID = [FIRAuth auth].currentUser.uid;
+    [[[_ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        // Get user value
+        //NSLog(@"%@", snapshot.value[@"dist"]);
+        
+        // ...
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
+    /* [[FIRAuth auth] signInWithEmail:@"divtest@email.com" password:@"123456" completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if (error == nil) {
             printf("%s", [user.email UTF8String]);
         } else {
             printf("%s", [error.description UTF8String]);
         }
-    }];
+    }]; */
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:app
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    return handled;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
