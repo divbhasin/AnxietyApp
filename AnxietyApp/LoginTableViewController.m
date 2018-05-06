@@ -8,6 +8,9 @@
 
 #import "LoginTableViewController.h"
 #import "User.h"
+@import FirebaseDatabase;
+@import FirebaseAuth;
+#import "GeoFire/GeoFire.h"
 
 @interface LoginTableViewController ()
 
@@ -23,6 +26,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.ref = [[FIRDatabase database] reference];
+    
+    GeoFire *geoFire = [[GeoFire alloc] initWithFirebaseRef:self.ref];
+    
     UIButton *button = [[UIButton alloc] init];
     [button addTarget:self action:@selector(Login_Action:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -148,4 +155,5 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+
 @end

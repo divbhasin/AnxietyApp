@@ -5,6 +5,9 @@ PODS:
   - Firebase/Core (4.13.0):
     - FirebaseAnalytics (= 4.2.0)
     - FirebaseCore (= 4.0.20)
+  - Firebase/Database (4.13.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.5)
   - FirebaseAnalytics (4.2.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -16,8 +19,14 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.20):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.5):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - GeoFire (2.0.1):
+    - Firebase/Database (~> 4.0)
   - GoogleToolboxForMac/DebugUtils (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
@@ -29,6 +38,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.15)
+  - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -38,17 +48,31 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
+  - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
+
+EXTERNAL SOURCES:
+  GeoFire:
+    :git: https://github.com/firebase/geofire-objc.git
+
+CHECKOUT OPTIONS:
+  GeoFire:
+    :commit: dc408bcd4268cc5ec8831cda0000c23863767d42
+    :git: https://github.com/firebase/geofire-objc.git
 
 SPEC CHECKSUMS:
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
   FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
   FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
   FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
+  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  GeoFire: 3e70a24019dc16816190f533c9cac0d1321c4a71
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 86ce55f32a2ba28c007cc3d9adf04af25823baa7
+PODFILE CHECKSUM: 65bd64fb58b0a35a4cb95b9a13d697cd01857e42
 
 COCOAPODS: 1.4.0
