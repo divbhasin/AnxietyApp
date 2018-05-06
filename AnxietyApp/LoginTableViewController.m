@@ -96,6 +96,7 @@
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - (IBAction)Login_Action:(UIBarButtonItem *)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Login" message: @"Please login" preferredStyle: UIAlertControllerStyleAlert];
 
@@ -124,6 +125,8 @@
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+=======
+>>>>>>> parent of 296610f... Can create users
 =======
 >>>>>>> parent of 296610f... Can create users
 @end
